@@ -1,0 +1,1 @@
+# This folder contains the .ipynb file called analysis that I used to run or call functions from scripts folder.
