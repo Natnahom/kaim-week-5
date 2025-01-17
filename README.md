@@ -47,3 +47,48 @@ This project is licensed under the MIT License. See the LICENSE file for more in
 # Acknowledgments
 Telethon - Python Telegram client.
 Pandas - Data manipulation and analysis library.
+
+# Task 2: Named Entity Recognition (NER) for Amharic Text
+
+## Overview
+This project aims to perform Named Entity Recognition (NER) on Amharic text data. The goal is to identify and label entities such as products, prices, and locations from a dataset of messages. The labeled data will be formatted in the CoNLL format, which is commonly used for NER tasks.
+
+# requirements
+pip install pandas
+
+## Dataset
+The input dataset should be in CSV format (preprocessed_data.csv) and should contain the following columns:
+
+- channel: The communication channel.
+- sender: The sender of the message.
+- timestamp: The time the message was sent.
+- content: The text message containing entities to be labeled.
+- tokens: Tokenized version of the content.
+
+## Usage
+Prepare your dataset in CSV format and save it as preprocessed_data.csv in the project directory.
+Run the script to read the dataset, label the entities, and save the output in CoNLL format:
+
+Call the function as it is in the analysis file.
+
+The labeled data will be saved as labeled_data.conll in the same directory.
+
+## Code Structure
+read_subset_df(data): Reads the CSV file and selects a random subset of messages from the content column.
+label_entities(message): Labels entities in a given message based on predefined logic.
+label_data(subset_df): Processes the subset of messages, applies entity labeling, and saves the results in CoNLL format.
+Example Output
+The output file labeled_data.conll will contain labeled entities in the following format:
+
+Baby    B-Product
+bottle  I-Product
+
+Addis   B-LOC
+abeba   I-LOC
+
+ዋጋ    B-PRICE
+1000    I-PRICE
+ብር     I-PRICE
+
+# License
+This project is licensed under the MIT License. See the LICENSE file for more information.
